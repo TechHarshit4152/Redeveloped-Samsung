@@ -1,0 +1,852 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Shavian&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Shavian&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+@font-face {
+    font-family: 'Samsung';
+    src: url('SamsungSharpSansBd.ttf') format('truetype'),
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 730vh;
+}
+
+:root{
+    --mid-black: #030303;
+    --black: #000;
+    --white: #fff;
+}
+
+body {
+    transition:  background-color ease-out .8s;
+}
+
+body[theme="black"] {
+    background: var(--mid-black);
+}
+
+body[theme="black"] .section {
+    color: var(--white);
+}
+
+body[theme="white"] {
+    background: var(--white);
+}
+
+body[theme="white"] .section {
+    color: var(--black);
+}
+
+
+
+/* Main Page  */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #030303;
+    position: relative;
+}
+
+.nav {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 45px;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    width: 300px;
+    gap: 20px;
+    height: fit-content;
+}
+
+.right-nav a {
+    text-decoration: none;
+    color: #fcfcfc;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 20px;
+    overflow: hidden;
+}
+
+.right-nav a i {
+    font-size: 22px;
+    margin-left: 25px;
+}
+
+.hero-section {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 0;
+    color: #fff;
+    position: relative;
+}
+
+.substitute-A-tag {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: #fcfcfc;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 20px;
+    overflow: hidden;
+}
+
+.substitute-A-tag:hover {
+    opacity: .8;
+}
+
+
+.top-hero {
+    font-size: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.top-hero h1 {
+    font-weight: 400;
+    color: #404040;
+}
+
+.nav-substitute {
+    width: 100%;
+    height: 0;
+    background: #111;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.btm-hero {
+    font-size: 27px;
+    font-family: 'Space Mono', sans-serif;
+}
+
+.menu-div {
+    display: none;
+}
+
+.btm-hero h1 {
+    font-weight: 500;
+    margin-top: -10px;
+    color: #fcfcfc;
+}
+
+.cursor-follower {
+    position: absolute;
+    scale: 0;
+    opacity: 0;
+    display: block;
+    z-index: 15;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fafafa;
+}
+
+.User:hover {
+    opacity: .8;
+}
+
+
+
+/* Product Section */
+
+
+
+.Product-section {
+    width: 100%;
+    height: 100vh;
+    background: #f4f4f4; 
+    display: flex;
+}
+
+.product-section-left {
+    user-select: none;
+    width: 60%;
+    height: 100%;
+    padding: 40px 100px;
+}
+
+.product-img-div {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.img-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    scale: 0;
+    opacity: 0;
+}
+
+.Anim-Product-text-white {
+    color: white;
+}
+
+.buy-now {
+    padding: 5px 10px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 18px;
+    margin-top: 8px;
+}
+
+.buy-now:hover {
+    background: #222;
+}
+
+.buy-now-white {
+    padding: 5px 10px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 18px;
+    margin-top: 8px;
+}
+
+.buy-now-white:hover {
+    color: #222;
+}
+
+.img-div-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.product-img-1 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.product-img-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-img-dets {
+    font-family: 'Outfit', sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    bottom: 0;
+}
+
+.product-img-dets h1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    margin-top: 15px;
+}
+
+.pro-desc {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: 300;
+    margin-top: 4px;
+}
+
+
+
+.product-section-right {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.product-section-right h3 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.product-name-div {
+    border-left: 2px solid #dfdfdf;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start ;
+    padding: 50px 30px;
+    gap: 50px;
+}
+
+.product-name {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.Border-btm {
+    width: 0%;
+    margin-top: 5px;
+    height: 2px;
+    background: #000;
+}
+
+
+/* DoWhatYouCant */
+
+.do-what-you-cant-section {
+    width: 100%;
+    height: 125vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.do-what-text {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Samsung', sans-serif;
+    margin-top: 12vh;
+    font-size: 18px;
+}
+
+.do-what-text h1 {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.border-do-what-text {
+    width: 0%;
+    margin-top: 5px;
+    height: 3px;
+    background: #000;
+}
+
+.border-do-what {
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+}
+
+.do-what-hover-img {
+    width: 100%;
+    height: 90vh;
+    /* background: red; */
+}
+
+.do-what-div1 {
+    border-top: 2px solid #dadada;
+    position: relative;
+    align-items: center;
+    padding: 0 80px;
+    /* justify-content: space-between; */
+    color: #000;
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    /* background: #000; */
+}
+
+.Serial-no {
+    font-family: 'Space Mono', sans-serif;
+    font-size: 25px;
+}
+
+.Serial_quote {
+    display: flex;
+    width: 800px;
+
+    margin-left: 150px;
+}
+
+.Serial_quote h1, .learn-more p {
+    font-family: 'Samsung', sans-serif; 
+}
+
+.learn-more {
+    display: flex;
+    width: 100px;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+
+    
+}
+
+.learn-more p {
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.do-what-img-absolute {
+    scale: 0;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 80px;
+    z-index: 10;
+    height: 80px;
+    position: absolute;
+    background: red;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.do-what-absolute-Image_tag {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* features-section */
+
+
+.features-section {
+    width: 100%;
+    height: 400vh;
+    background: #fff;
+}
+
+.feature-img1 {
+    position: relative;
+    margin-top: 5vh;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.feature-img1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    object-position: top;
+    transform: translateX(-100%);
+}
+
+.Feel-the-crisp {
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    background: white;
+    width: 125px;
+    height: fit-content;
+    scale: 0;
+    opacity: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 5px 10px;
+}
+
+.feel-the-crisp-child-div {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    /* background: red; */
+    transform: translateX(0%);
+}
+
+.feel-the-crisp-child-div p {
+    white-space: nowrap;
+    font-family: 'Samsung', sans-serif;
+}
+
+
+@media (max-width: 850px) {
+
+    html, body {
+        height: 710vh;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-hero {
+        white-space: nowrap;
+        margin-top: 150px;
+        font-size: 45px;
+    }
+
+    .btm-hero {
+        font-size: 25px;
+        white-space: nowrap;
+        margin-top: 10px;
+    }
+
+    .Product-section {
+        position: relative;
+    }
+
+    .product-section-right {
+        padding: 10px 15px;
+        height: 20vh;
+        /* background: red; */
+        border-radius: 0px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    .product-img-dets {
+        margin-top: 30px;
+    }
+
+    
+
+    .product-img-div {
+        border-radius: 0px;
+    }
+
+    .product-name-div {
+        /* overflow-x: auto; */
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        gap: 20px;
+        border: 0;
+    }
+
+    .pro-desc {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .buy-now {
+        font-size: 25px;
+        padding: 7px 12px;
+        border-radius: 25px;
+    }
+
+    .buy-now-white {
+        font-size: 25px;
+        padding: 7px 12px;
+        border-radius: 25px;
+    }
+
+    .product-name {
+        white-space: nowrap;
+        font-size: 15px;
+        overflow:visible
+    }
+
+
+    .product-section-left {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .do-what-you-cant-section {
+        width: 100%;
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .do-what-div1 {
+        padding: 0px 50px;
+    }
+
+    .Serial_quote {
+        margin-left: 50px;
+    }
+
+    .Serial_quote h1 {
+        font-size: 25px;
+        white-space: nowrap;
+    }
+
+}
+
+
+
+@media (max-width: 450px) {
+
+    html, body {
+        height: 700vh;
+    }
+    .nav {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 22px;
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    .menu-div {
+        font-size: 25px;
+        color: white;
+        display: block;
+    }
+
+    .top-hero {
+        margin-top: 150px;
+        font-size: 22px;
+        white-space: nowrap;
+    }
+
+    .btm-hero {
+        white-space: nowrap;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .Product-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    .product-section-left {
+        user-select: none;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    .product-img-div {
+        border-radius: 0px;
+    }
+
+    .product-section-right {
+        padding: 10px 15px;
+        height: 20vh;
+        /* background: red; */
+        border-radius: 0px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .product-name-div {
+        overflow-x: auto;
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        gap: 20px;
+        border: 0;
+    }
+
+    .product-name-div::-webkit-scrollbar {
+        display: none;
+    }
+
+    .product-name {
+        white-space: nowrap;
+        font-size: 15px;
+    }
+
+
+    .do-what-you-cant-section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .do-what-hover-img {
+        height: 75vh;
+    }
+
+    .do-what-text {
+        margin-top: 80px;
+    }
+
+    .do-what-text h1 {
+        white-space: nowrap;
+        font-size: 25px;
+    }
+
+    .do-what-div1 {
+        padding: 0px 15px;
+        height: 15vh;
+    }
+
+    .Serial-no {
+        font-size: 18px;
+    }
+
+    .learn-more {
+        display: none;
+    }
+
+    .Serial_quote {
+        margin-left: 25px;
+    }
+
+    .Serial_quote h1 {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    
+
+}
+@media (max-width: 380px) {
+    .nav {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    .menu-div {
+        font-size: 22px;
+        color: white;
+        display: block;
+    }
+
+    .top-hero {
+        margin-top: 100px;
+        font-size: 22px;
+        white-space: nowrap;
+    }
+
+    .btm-hero {
+        white-space: nowrap;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .buy-now {
+        font-size: 15px;
+        padding: 7px 12px;
+        border-radius: 25px;
+    }
+
+    .pro-desc {
+        font-size: 17px;
+    }
+
+    .buy-now-white {
+        font-size: 15px;
+        padding: 7px 12px;
+        border-radius: 25px;
+    }
+
+    .do-what-you-cant-section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .do-what-hover-img {
+        height: 75vh;
+    }
+
+    .do-what-text {
+        margin-top: 50px;
+    }
+
+    .do-what-text h1 {
+        white-space: nowrap;
+        font-size: 25px;
+    }
+
+    .do-what-div1 {
+        padding: 0px 15px;
+        height: 15vh;
+    }
+
+    .Serial-no {
+        font-size: 15px;
+    }
+
+    .learn-more {
+        display: none;
+    }
+
+    .Serial_quote {
+        margin-left: 25px;
+    }
+
+    .Serial_quote h1 {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
