@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var tl = gsap.timeline()
 
     function MainPageAnim() {
@@ -453,3 +454,6 @@ var tl = gsap.timeline()
     handleMobileView();
     DOMContentLoaded()
     OnScrollFade()
+=======
+JUST WAIT AND WATCH
+>>>>>>> d712bcdfa547782470246241b8cdd2668ce5cac8
